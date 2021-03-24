@@ -37,8 +37,8 @@ class Favoritos(Base):
     __tablename__ = 'favoritos'
     id = Column(Integer, primary_key=True)
     name = Column(String(250))
-    personajes_name = Column(Integer, ForeignKey('personajes.name'))
-    planetas_name = Column(Integer, ForeignKey('planetas.name'))
+    personajes_id = Column(Integer, ForeignKey('personajes.id'))
+    planetas_id = Column(Integer, ForeignKey('planetas.id'))
     usuario_id = Column(Integer, ForeignKey('usuario.id'))
     
 
